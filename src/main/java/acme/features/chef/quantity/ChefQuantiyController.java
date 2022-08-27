@@ -27,6 +27,9 @@ public class ChefQuantiyController extends AbstractController<Chef, Quantity> {
 	@Autowired
 	protected ChefQuantityUpdateService updateService;
 	
+	@Autowired
+	protected ChefQuantityDeleteService deleteService;
+	
 	@PostConstruct
 	protected void initialise() {
 		
@@ -35,6 +38,7 @@ public class ChefQuantiyController extends AbstractController<Chef, Quantity> {
 		super.addCommand("list-by-recipe",  "list", this.listService);
 		super.addCommand("show", this.showService);
 		super.addCommand("update", this.updateService);
+		super.addCommand("delete", this.deleteService);
 	}
 
 }

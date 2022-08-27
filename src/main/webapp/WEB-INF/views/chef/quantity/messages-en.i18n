@@ -43,5 +43,7 @@ chef.quantity.form.label.gallon = Gallon
 chef.quantity.form.label.spoon = Spoon
 chef.quantity.form.label.vacio= Choose an amount
 
+chef.quantity.form.button.delete= Delete
+
 
 

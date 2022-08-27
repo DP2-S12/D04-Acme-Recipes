@@ -44,5 +44,6 @@ chef.quantity.form.label.gallon = Galón
 chef.quantity.form.label.spoon = Cucharada
 
 chef.quantity.form.label.vacio= Elige una cantidad
+chef.quantity.form.button.delete= Bórralo
 
 

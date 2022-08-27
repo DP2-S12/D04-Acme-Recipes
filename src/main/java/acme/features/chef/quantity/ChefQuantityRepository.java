@@ -38,4 +38,9 @@ public interface ChefQuantityRepository extends AbstractRepository{
 	@Query("select i from CookingItem i WHERE i.code = :code")
 	CookingItem findCookingItemByCode(String code);
 	
+	@Query("select i from Quantity i where i.id = :id")
+	Quantity findQuantityById(int id);
+	
+
+	
 }

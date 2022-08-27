@@ -11,6 +11,7 @@
 		<jstl:when test="${acme:anyOf(command, 'show, update')}">
 			<acme:input-integer code="chef.quantity.form.label.number" path="number" readonly="${recipe.status == 'PUBLISHED'}" />
 			
+			
 			<jstl:if test="${recipe.status == 'NONE_PUBLISHED'}" >
 				<acme:submit code="chef.quantity.form.button.update" action="/chef/quantity/update"/>
 			</jstl:if>
@@ -29,7 +30,8 @@
 			<jstl:if test="${cookingitem.status == 'NONE_PUBLISHED' && cookingitem.getChef().getId() == chefId}" >
 				<acme:button code="chef.quantity.form.button.updateItem" action="/chef/cooking-item/update?id=${cookingitem.getId()}"/>
 			</jstl:if>
-			
+		
+		<acme:submit code="chef.quantity.form.button.delete" action="/chef/quantity/delete?id=${id}"/>
 		</jstl:when>	
 		
 		<jstl:when test="${command == 'createKitchenUtensil'}">
